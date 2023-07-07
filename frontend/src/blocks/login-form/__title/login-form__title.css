@@ -1,0 +1,18 @@
+.login-form__title {
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  color: #fff;
+  margin-top: 60px;
+  margin-bottom: 47px;
+}
+@media screen and (max-width: 600px) {
+  .login-form__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 13px;
+    margin-top: 39px;
+  }
+}

@@ -1,0 +1,15 @@
+.login-form__inputs-all {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 216px;
+}
+
+@media screen and (max-width: 600px) {
+  .login-form__inputs-all {
+    max-width: 282px;
+    padding: 25px 0 0;
+    margin-bottom: 170px;
+  }
+}

@@ -1,0 +1,16 @@
+.info-tooltip__text {
+  margin: 40px 0 0 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 900;
+  text-align: center;
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+  .info-tooltip__text {
+    margin-top: 32px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}

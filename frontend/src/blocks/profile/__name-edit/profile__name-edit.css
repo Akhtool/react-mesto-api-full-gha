@@ -1,0 +1,12 @@
+.profile__name-edit {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 500px) {
+    .profile__name-edit {
+        gap: 10px;
+    }
+}

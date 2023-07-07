@@ -1,0 +1,16 @@
+.login-form__button {
+  width: 100%;
+  color: black;
+  font-style: normal;
+  text-align: center;
+  background-color: white;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .login-form__button {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+}
