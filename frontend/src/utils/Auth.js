@@ -47,7 +47,7 @@ class Auth {
 const auth = new Auth({
   // baseUrl: "https://auth.nomoreparties.co",
   // baseUrl: "http://localhost:3000",
-  baseUrl: "https://api.akhtool.mesto.nomoredomains.work",
+  baseUrl: "http://api.akhtool.mesto.nomoredomains.work",
   headers: {
     "Content-Type": "application/json",
   },
