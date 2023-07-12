@@ -6,6 +6,7 @@ const AuthError = require('../errors/authError');
 const ConflictError = require('../errors/conflictError');
 const NotFoundError = require('../errors/notFoundError');
 const RequestError = require('../errors/requestError');
+const { secret } = require('../config');
 
 const findUser = (id, res, next) => {
   User.findById(id)
@@ -86,7 +87,7 @@ module.exports.login = (req, res, next) => {
 
           const token = jwt.sign(
             { _id: user._id },
-            'super-puper-secret-key',
+            secret,
             { expiresIn: '7d' },
           );
 
