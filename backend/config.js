@@ -6,7 +6,7 @@ const {
   NODE_ENV = 'dev',
   JWT_SECRET,
   PORT = 3000,
-  DB_URI = 'mongodb://localhost:27017/mestodb',
+  DB_URI = 'mongodb://localhost:127.0.0.1:27017/mestodb',
 } = process.env;
 
 const secret = NODE_ENV === 'production' ? JWT_SECRET : devSecret;

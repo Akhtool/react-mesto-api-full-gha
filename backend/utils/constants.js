@@ -4,7 +4,6 @@ const ERROR_CODE_DEFAULT = 500;
 const dafaultErrorMessage = 'На сервере произошла ошибка.';
 const devSecret = 'super-puper-secret-key';
 
-
 module.exports = {
   ERROR_CODE_INVALID_DATA,
   ERROR_CODE_NOT_FOUND,
