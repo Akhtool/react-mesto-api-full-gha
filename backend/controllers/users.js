@@ -55,7 +55,6 @@ module.exports.createUser = (req, res, next) => {
       })
         .then((user) => {
           const noPasswordUser = user.toObject({ useProjection: true });
-
           return res.status(201).send(noPasswordUser);
         })
         .catch((err) => {
