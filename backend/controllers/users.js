@@ -59,7 +59,6 @@ module.exports.createUser = (req, res, next) => {
           return res.status(201).send(noPasswordUser);
         })
         .catch((err) => {
-          console.log('err>>>', err);
           if (err.name === 'ValidationError') {
             return next(new RequestError('Переданы некорректные данные при создании пользователя.'));
           }
