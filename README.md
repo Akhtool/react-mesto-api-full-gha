@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP 158.160.38.114
+IP 51.250.78.64
 
 Frontend https://akhtool.mesto.nomoredomains.work
 
