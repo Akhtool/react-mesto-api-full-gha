@@ -25,10 +25,11 @@ function App() {
   const [isInfoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
   const [isInfoTooltipMessage, setIsInfoTooltipMessage] = useState("");
   const [isRegistrationSuccess, setIsRegistrationSuccess] = useState(false);
+  const navigate = useNavigate();
   const token = localStorage.getItem("token");
 
-  const navigate = useNavigate();
-  const tokenCheck = useCallback(() => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const tokenCheck = () => {
     if (token) {
       auth
         .checkToken(token)
@@ -40,21 +41,20 @@ function App() {
         .catch((err) => console.log(err));
     }
 
-    return !!token
-  }, [token]);
+    return !!token;
+  };
 
   useEffect(() => {
     if (tokenCheck()) {
-      Promise.all([api.getUserInfo(), api.getInitialCards()])
+      Promise.all([api.getUserInfo(token), api.getInitialCards(token)])
         .then(([userData, initialCardsData]) => {
           setCurrentUser(userData);
           setCards(initialCardsData);
         })
         .catch((err) => console.error(err));
 
-      navigate("/", { replace: true });
     }
-  }, [navigate, tokenCheck]);
+  }, [token]);
 
   function closeAllPopups() {
     setIsEditProfilePopupOpen(false);

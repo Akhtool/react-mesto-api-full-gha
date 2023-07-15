@@ -13,9 +13,11 @@ class Api {
     return Promise.reject(`Ошибка: ${res.status}`);
   }
 
-  getInitialCards() {
+  getInitialCards(token) {
     return fetch(`${this._baseUrl}/cards`, {
-      headers: this._headers,
+      headers: token
+        ? { ...this._headers, Authorization: `Bearer ${token}` }
+        : this._headers,
     }).then(this._checkResponseStatus);
   }
 
@@ -41,7 +43,9 @@ class Api {
 
   getUserInfo(token) {
     return fetch(`${this._baseUrl}/users/me`, {
-      headers: this._headers,
+      headers: token
+        ? { ...this._headers, Authorization: `Bearer ${token}` }
+        : this._headers,
     }).then(this._checkResponseStatus);
   }
 
